@@ -113,7 +113,7 @@ if arquivo:
             """,
                 unsafe_allow_html=True,
             )
-        st.metric(label='TOTAL VENDAS NA FEIRA', value=str_total_venda_feira)
+        st.metric(label='TOTAL VENDIDO NA FEIRA', value=str_total_venda_feira)
         st.divider()
 
     # Cria filtro para o Tipo de Venda
