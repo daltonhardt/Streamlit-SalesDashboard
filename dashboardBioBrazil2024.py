@@ -60,7 +60,7 @@ st.markdown('<style>div.block-container{padding-top:2rem;}</style>', unsafe_allo
 arquivo = st.sidebar.file_uploader('Escolha o arquivo (.csv)', type='csv')
 
 if arquivo:
-    filename = arquivo.name
+    filename = arquivo
     # print('filename:', filename)
     #st.write(filename, encoding='utf-8')
     df = pd.read_csv(filename, date_format='%d/%m/%Y', encoding='utf-8')
