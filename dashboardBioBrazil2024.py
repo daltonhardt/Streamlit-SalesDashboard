@@ -114,11 +114,11 @@ if arquivo:
         
         df_valor_cobrado = df.drop_duplicates(['TICKET'])
         df_valor_cobrado.reset_index(inplace=True, drop=True)
-        print('df_valor_cobrado  1  :\n', df_valor_cobrado)
+        #print('df_valor_cobrado  1  :\n', df_valor_cobrado)
 
         df_total_venda_periodo = df_valor_cobrado['TOTAL-COBRADO'].sum()
         str_total_venda_periodo = locale.format_string('R$ %.2f', df_total_venda_periodo, True)
-        print('str_total_venda_periodo.:', str_total_venda_periodo)
+        #print('str_total_venda_periodo.:', str_total_venda_periodo)
 
         with col1:
             # st.markdown(
@@ -204,8 +204,8 @@ if arquivo:
         #df_filtrado.round({'VALOR-ITEM': 2, 'TOTAL-ITEM': 2, 'TOTAL': 2, 'TOTAL-COMPRA': 2, 'TOTAL-COBRADO': 2, 'TOTAL-AJUSTADO': 2})
 
         df_produto = df_filtrado.groupby(by=['PRODUTO'], as_index=False)['QTDE'].sum()
-        print('df_produto:\n', df_produto)
-        print('df_filtrado:\n', df_filtrado)
+        #print('df_produto:\n', df_produto)
+        #print('df_filtrado:\n', df_filtrado)
 
         #df_valor_cobrado = df_filtrado.drop_duplicates(['TICKET'])
         #df_valor_cobrado.reset_index(inplace=True, drop=True)
@@ -218,9 +218,9 @@ if arquivo:
         #     df_total_venda_periodo = df_filtrado['TOTAL-AJUSTADO'].sum()
         #     print('df_total_venda_periodo..', df_total_venda_periodo)
         df_total_venda_periodo = df_filtrado['TOTAL-AJUSTADO'].sum()
-        print('df_total_venda_periodo..', df_total_venda_periodo)
+        #print('df_total_venda_periodo..', df_total_venda_periodo)
         str_total_venda_periodo = locale.format_string('R$ %.2f', df_total_venda_periodo, True)
-        print('str_total_venda_periodo..:', str_total_venda_periodo)
+        #print('str_total_venda_periodo..:', str_total_venda_periodo)
 
         # calculando percentual dos itens filtrados sobre o valor total de vendas
         percentual_filtrado = df_total_venda_periodo / df_total_venda_feira
@@ -243,7 +243,7 @@ if arquivo:
         # filtrando o dataframe para pegar somente os produtos e suas quantidades
         df_filtrado_total_produto = df_filtrado.groupby(['PRODUTO'])[['TOTAL-AJUSTADO']].sum()
         df_filtrado_total_produto.reset_index(inplace=True)
-        print('df_filtrado_total_produto:\n', df_filtrado_total_produto)
+        #print('df_filtrado_total_produto:\n', df_filtrado_total_produto)
 
         with col4:
             st.metric(label='\# TICKETS:', value=num_tickets)
