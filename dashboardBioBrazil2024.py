@@ -238,7 +238,7 @@ if arquivo:
         # filtrando o dataframe para pegar somente os produtos e quantidades
         df_filtrado_qtde = df_filtrado.groupby(['PRODUTO'])[['QTDE']].sum()
         df_filtrado_qtde.reset_index(inplace=True)
-        print('df_filtrado_qtde:\n', df_filtrado_qtde)
+        #print('df_filtrado_qtde:\n', df_filtrado_qtde)
 
         # filtrando o dataframe para pegar somente os produtos e suas quantidades
         df_filtrado_total_produto = df_filtrado.groupby(['PRODUTO'])[['TOTAL-AJUSTADO']].sum()
