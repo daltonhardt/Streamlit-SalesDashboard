@@ -68,7 +68,7 @@ if arquivo:
     # print('filename:', filename)
     #st.write(filename, encoding='utf-8')
     df = pd.read_csv(filename, date_format='%d/%m/%Y', encoding='utf-8')
-    #print('Header:\n', df.columns.values.tolist())
+    print('Header:\n', df.columns.values.tolist())
 
     if df.columns.values.tolist() != dataframe_header:
         #print('ERRO no formato do arquivo!')
